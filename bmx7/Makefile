@@ -30,7 +30,6 @@ MAKE_ARGS += EXTRA_CFLAGS="$(TARGET_CFLAGS) \
 				-DBMX7_LIB_IWINFO" \
 				EXTRA_LDFLAGS="$(TARGET_LDFLAGS) \
 			 	-L$(STAGING_DIR)/usr/lib -liwinfo" \
-				GIT_REV="$(PKG_REV)" \
 				CC="$(TARGET_CC)" \
 				INSTALL_DIR="$(PKG_INSTALL_DIR)" \
 				build_all
@@ -98,7 +97,7 @@ define Package/bmx7-table
 endef
 
 define Package/bmx7/install
-	$(INSTALL_DIR) $(1)/usr/sbin $(1)/etc/config $(1)/etc/init.d
+	$(INSTALL_DIR) $(1)/usr/sbin
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/$(MAKE_PATH)/bmx7 $(1)/usr/sbin/bmx7
 endef
 
