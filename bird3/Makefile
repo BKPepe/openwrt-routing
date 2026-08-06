@@ -12,6 +12,7 @@ PKG_HASH:=21297d7a02edd700ae82de5a630055a9cb88a99e2e7e45551bc7d6c1e5b4de2c
 
 PKG_MAINTAINER:=Toke Høiland-Jørgensen <toke@toke.dk>, Nick Hainke <vincent@systemli.org>
 PKG_LICENSE:=GPL-2.0-or-later
+PKG_CPE_ID:=cpe:/a:nic:bird
 
 PKG_BUILD_DEPENDS:=ncurses readline
 PKG_BUILD_DIR:=$(BUILD_DIR)/bird-$(PKG_VERSION)
@@ -39,7 +40,7 @@ define Package/bird3c
 endef
 
 define Package/bird3cl
-  TITLE:=The BIRD lightweight command-line client (v2)
+  TITLE:=The BIRD lightweight command-line client (v3)
   URL:=https://bird.nic.cz/
   SECTION:=net
   CATEGORY:=Network
